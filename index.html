@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>1 INPUT 1 OUTPUT</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- INPUT FIELD FOR 1 CHARACTER -->
+    <input type="text" id="charInput" maxlength="1">
+
+    <!-- BUTTON TO DISPLAY IMAGE -->
+    <button onclick="displayImage()" id="submitButton">SHOW IMAGE!</button>
+
+    <!-- IMAGE TO DISPLAY -->
+    <img id="displayedImage" src="" alt="Displayed Image">
+</div>
+
+
+    <!-- Image Display Script Below -->
+    <script>
+        // Array of images
+        // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
+        const images = [
+            "aquaria.png", //A
+            "brooke-lynn-hytes.png", //B
+            "crystal-methyd.png", //C
+            "denali.png", //D
+            "etcetera-etcetera.png", //E
+            "farrah-moan.png", //F
+            "gigi-goode.png", //G
+            "hazel.png", //H
+            "ivory-glaze.png", //I
+            "jewels-sparkles.png", //J
+            "katya.png", //K
+            "lana-jarae.png", //L
+            "mirage.png", //M
+            "naomi-smalls.png", //N
+            "orion-story.png", //O
+            "plastique-tiara.png", //P
+            "q.png", //Q
+            "raja.png", //R
+            "sasha-colby.png", //S
+            "tayce.png", //T
+            "utica.png", //U
+            "venus.png", //V
+            "willow-pill.png", //W
+            "xana.png", //X
+            "yuri.png", //Y
+            "zymba-ding.png"  //Z
+        ];
+
+        function displayImage() {
+            const input = document.getElementById("charInput").value.toUpperCase();
+            const imgElement = document.getElementById("displayedImage");
+            
+            // Assign an image based on character (A-Z)
+            const index = input.charCodeAt(0) - 65; // 'A' is 65 in ASCII
+            if (index >= 0 && index < images.length) {
+                imgElement.src = images[index];
+                imgElement.style.display = "block";
+            } else {
+                /* 
+                alert("Please enter a letter between A and Z.");
+                imgElement.style.display = "none";
+                */
+
+                // IF INVALID INPUT IS ENTERED, DISPLAY ALTERNATE IMAGE
+                imgElement.src = "else.jpg"
+                imgElement.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    background-color: #f3aad0;
+}
+
+img {
+    width: 650px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#submitButton {
+    background-color: #cc8eef;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#submitButton:hover {
+    background-color: #aaccf1;
+}
+
+#displayedImage {
+    display: none; /* This line is mandatory */
+}
+
+#charInput {
+    background-color: #ffeef7;
+}
